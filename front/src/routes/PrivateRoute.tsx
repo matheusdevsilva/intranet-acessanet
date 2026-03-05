@@ -1,0 +1,12 @@
+import { Navigate } from "react-router-dom";
+import { useAuth } from "../context/AuthContext";
+
+export default function PrivateRoute({ children }: any) {
+  const { user, loading } = useAuth();
+
+  if (loading) return <h2>Carregando...</h2>;
+
+  if (!user) return <Navigate to="/" />;
+
+  return children;
+}
