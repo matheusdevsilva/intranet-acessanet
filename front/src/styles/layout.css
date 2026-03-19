@@ -1,73 +1,113 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #0b172a;
+  color: white;
+}
+
+/* estrutura principal */
 .layout {
   display: flex;
   height: 100vh;
-  background-color: #0f172a;
-  color: #e2e8f0;
-  font-family: "Inter", sans-serif;
 }
 
-.content {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-main {
-  flex: 1;
-  padding: 28px;
-  background-color: #0f172a;
-}
+/* SIDEBAR */
 .sidebar {
-  width: 260px;
-  background-color: #111827;
-  border-right: 1px solid #1f2937;
-  padding: 24px 18px;
+  width: 230px;
+  background: #0f1f3d;
+  padding: 20px;
+  border-right: 1px solid #1f2e4d;
   display: flex;
   flex-direction: column;
 }
 
-.logo {
-  font-size: 18px;
-  font-weight: 600;
-  margin-bottom: 40px;
-  color: #2563eb;
+.sidebar h2 {
+  margin-bottom: 25px;
+  color: #4ea1ff;
 }
 
 .menu-item {
-  padding: 12px 14px;
+  display: block;
+  text-decoration: none;
+  color: #c8d3e6;
+  padding: 10px;
   border-radius: 6px;
   margin-bottom: 6px;
-  font-size: 14px;
-  color: #cbd5e1;
-  cursor: pointer;
   transition: 0.2s;
 }
 
 .menu-item:hover {
-  background-color: #1e293b;
+  background: #1c2d52;
+  color: white;
 }
 
 .menu-item.active {
-  background-color: #1e3a8a;
-  color: #fff;
+  background: #2b4fa3;
+  color: white;
 }
 
-.header {
-  height: 70px;
-  background-color: #111827;
-  border-bottom: 1px solid #1f2937;
+/* area direita */
+.main-area {
+  flex: 1;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 28px;
+  flex-direction: column;
 }
 
-.header-title {
-  font-size: 16px;
-  font-weight: 500;
+/* HEADER */
+.header{
+height:70px;
+background:#102448;
+border-bottom:1px solid #1f2e4d;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:0 30px;
 }
 
-.user-info {
-  font-size: 14px;
-  color: #94a3b8;
+.page-title{
+font-size:20px;
+font-weight:600;
+}
+
+.header-right{
+display:flex;
+align-items:center;
+gap:15px;
+}
+
+.user{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.avatar{
+width:35px;
+height:35px;
+border-radius:50%;
+background:#4ea1ff;
+display:flex;
+align-items:center;
+justify-content:center;
+font-weight:bold;
+}
+
+.logout-btn{
+background:#3b82f6;
+border:none;
+padding:8px 16px;
+border-radius:6px;
+color:white;
+cursor:pointer;
+}
+
+/* conteúdo */
+.page-content {
+  flex: 1;
+  padding: 30px;
+  overflow: auto;
 }
